@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<title>Tasks List</title>
+</head>
+<body onload="showTask()">
+
+	<div class="wrapper" id="add-task" style="margin: 10px">
+		<div class="jumbotron">
+			<h1 class="display-5">Лист задач <small style="color: grey;">Добавление задачи</small></h1>
+			<br>
+			<form id="taskForm">
+				<label for="form-control">Наименование задачи</label>
+				<input class="form-control" type="text" placeholder="Наименование задачи" id="taskTitle" required>
+				<br>
+				<label for="taskDesc">Описание задачи</label>
+	    		<textarea class="form-control" id="taskDesc" rows="3"></textarea>
+	    		<br>
+	    		<input class="form-control" type="text" placeholder="Задача назначена(кому)" id="taskAssignedTo" required>
+	    		<br>
+	    		<label for="custom-select">Приоритетность</label>
+	    		 <select class="custom-select" id="taskPriority" required>
+				    <option selected></option>
+				    <option value="Неважно" selected>Неважно</option>
+				    <option value="Важно">Важно</option>
+				    <option value="Срочно">Срочно</option>
+	  			</select>
+	  			<br><br>
+				<button type="submit" class="btn btn-primary">Добавить задачу</button>
+			</form>
+		</div>
+
+		<div id="tasksList">
+			
+		</div>
+	</div>
+
+
+	<script src="https://kit.fontawesome.com/c5c78a32bc.js" crossorigin="anonymous"></script>
+	<script src="js/main.js"></script>
+</body>
+</html>
